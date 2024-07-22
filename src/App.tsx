@@ -18,7 +18,10 @@ function App() {
           <PhotoViewer selectedImgUrl={selectedImgUrl} />
           <ImageSelector 
             selectedImgUrl={selectedImgUrl} 
-            onClick={selectImg}/>
+            // reference is needed only, so use selectImg instead of 
+            // onClick={() => selectImg(selectedImgUrl)}, 
+            // we're not using the function at this stage
+            onClick={selectImg}/>  
       </div>
   );
 }
