@@ -5,35 +5,35 @@ import './App.css'
 import {PhotoViewer} from './PhotoViewer/PhotoViewer.tsx'
 import {ImageSelector} from './ImageSelector/ImageSelector.tsx'
 
-const brokenImages = [
-  1, 24, 32, 36, 44, 47
-];
+// const brokenImages = [
+//   1, 24, 32, 36, 44, 47
+// ];
 
-function getImageUrls() {
-  const urls = [];
+// function getImageUrls() {
+//   const urls = [];
 
-  for (let i = 0; i < 50; i++) {
-      if (!brokenImages.includes(i)) {
-          const imageNumberString = i.toString().padStart(2, '0');
-          urls.push(`https://picsum.photos/id/6${imageNumberString}/1600/900.jpg`)
-      }
-  }
+//   for (let i = 0; i < 50; i++) {
+//       if (!brokenImages.includes(i)) {
+//           const imageNumberString = i.toString().padStart(2, '0');
+//           urls.push(`https://picsum.photos/id/6${imageNumberString}/1600/900.jpg`)
+//       }
+//   }
 
-  return urls;
-}
+//   return urls;
+// }
 
-export const imageUrls = getImageUrls();
+// export const imageUrls = getImageUrls();
 
 function App() {
-  const imgItems = imageUrls.map(imageUrl =>
-    <ImageSelector src={imageUrl} />
-  );
+  // const imgItems = imageUrls.map(imageUrl =>
+  //   <ImageSelector src={imageUrl} />
+  // );
 
   return (
       <div>
           <h1>React Photo Viewer</h1>
           <PhotoViewer src="https://picsum.photos/id/600/1600/900.jpg"/>
-          {imgItems}
+          <ImageSelector />
       </div>
   );
 }

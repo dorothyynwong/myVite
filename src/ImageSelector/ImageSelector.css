@@ -1,0 +1,8 @@
+.unselected {
+    width: 100px;
+}
+
+.selected {
+    border: solid blue 10px;
+    width: 100px;
+}

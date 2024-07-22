@@ -7,7 +7,7 @@ interface PhotoViewerProps {
 
 export function PhotoViewer({ src }: PhotoViewerProps): JSX.Element {
     return (                
-        <div className="helloWorld">               // return some TSX 
+        <div className="helloWorld">               
             Hello World!
             <img src={src}/>
         </div>
