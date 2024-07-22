@@ -2,14 +2,15 @@ import React, { ReactElement } from "react";  // import React (to provide access
 import "./PhotoViewer.css";
 
 interface PhotoViewerProps {
-    src: string;
+    // src: string;
+    selectedImgUrl: string;
 }
 
-export function PhotoViewer({ src }: PhotoViewerProps): JSX.Element {
+export function PhotoViewer({selectedImgUrl}: PhotoViewerProps): JSX.Element {
     return (                
         <div className="helloWorld">               
-            Hello World!
-            <img src={src}/>
+            {/* Hello World! */}
+            <img src={selectedImgUrl}/>
         </div>
         
     );

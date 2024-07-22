@@ -20,20 +20,18 @@ const brokenImages = [
   
 export const imageUrls = getImageUrls();
 
-// export function ImageSelector({src}: ImageSelectorProps): JSX.Element {
-export function ImageSelector(): JSX.Element {
+interface ImageSelectorProps {
+    selectedImgUrl: string;
+    onClick: (url: string) => void;
+}
 
-    const [selectedImgUrl, setSelectedImgUrl] = useState("");
-
-    function selectImg(url: string) {
-        setSelectedImgUrl(url);
-    }
+export function ImageSelector({selectedImgUrl, onClick}: ImageSelectorProps): JSX.Element {
 
     const imgItems = imageUrls.map(imageUrl => 
         <img 
             src={imageUrl} 
             className={(selectedImgUrl === imageUrl)? "selected" : "unselected"} 
-            onClick={() => selectImg(imageUrl)}
+            onClick={() => onClick(imageUrl)}
         />
     );
     
