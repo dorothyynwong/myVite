@@ -8,7 +8,7 @@ interface PhotoViewerProps {
 
 export function PhotoViewer({selectedImgUrl}: PhotoViewerProps): JSX.Element {
     return (                
-        <div className="helloWorld">               
+        <div className="photoViewer">               
             {/* Hello World! */}
             <img src={selectedImgUrl}/>
         </div>

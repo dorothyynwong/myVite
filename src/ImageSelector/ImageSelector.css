@@ -3,6 +3,14 @@
 }
 
 .selected {
-    border: solid blue 10px;
+    border: solid blue 5px;
     width: 100px;
+}
+
+.imageSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-evenly;
 }

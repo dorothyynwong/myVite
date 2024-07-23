@@ -3,17 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {PhotoViewer} from './PhotoViewer/PhotoViewer.tsx'
-import {ImageSelector} from './ImageSelector/ImageSelector.tsx'
+import {ImageSelector, imageUrls} from './ImageSelector/ImageSelector.tsx'
 
 function App() {
-  const [selectedImgUrl, setSelectedImgUrl] = useState("");
+  const randomInd = Math.round(Math.random() * 50);
+  const [selectedImgUrl, setSelectedImgUrl] = useState(imageUrls[randomInd]);
 
   // function selectImg(url: string) {
   //     setSelectedImgUrl(url);
   // }
 
   return (
-      <div>
+      <div className="photoViewer">
           <h1>React Photo Viewer</h1>
           <PhotoViewer selectedImgUrl={selectedImgUrl} />
           <ImageSelector 
