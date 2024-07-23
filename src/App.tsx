@@ -8,9 +8,9 @@ import {ImageSelector} from './ImageSelector/ImageSelector.tsx'
 function App() {
   const [selectedImgUrl, setSelectedImgUrl] = useState("");
 
-  function selectImg(url: string) {
-      setSelectedImgUrl(url);
-  }
+  // function selectImg(url: string) {
+  //     setSelectedImgUrl(url);
+  // }
 
   return (
       <div>
@@ -21,7 +21,11 @@ function App() {
             // reference is needed only, so use selectImg instead of 
             // onClick={() => selectImg(selectedImgUrl)}, 
             // we're not using the function at this stage
-            onClick={selectImg}/>  
+
+            // can use setSelectedImgUrl directly, no need for selectImg
+            // onClick={selectImg} />
+            setSelectedImgUrl={setSelectedImgUrl}/>  
+
       </div>
   );
 }

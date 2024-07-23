@@ -22,20 +22,19 @@ export const imageUrls = getImageUrls();
 
 interface ImageSelectorProps {
     selectedImgUrl: string;
-    onClick: (url: string) => void;
+    setSelectedImgUrl: (url: string) => void;
 }
 
-export function ImageSelector({selectedImgUrl, onClick}: ImageSelectorProps): JSX.Element {
-
+//export function ImageSelector({selectedImgUrl, setSelectedImgUrl}: ImageSelectorProps): JSX.Element {
+export function ImageSelector(imageSelectorProps: ImageSelectorProps): JSX.Element {
     const imgItems = imageUrls.map(imageUrl => 
         <img 
             src={imageUrl} 
-            className={(selectedImgUrl === imageUrl)? "selected" : "unselected"} 
-            onClick={() => onClick(imageUrl)}
+            className={(imageSelectorProps.selectedImgUrl === imageUrl)? "selected" : "unselected"} 
+            onClick={() => imageSelectorProps.setSelectedImgUrl(imageUrl)}
         />
     );
     
-
     return (                
         <div className="imageSelector">              
             {imgItems}
