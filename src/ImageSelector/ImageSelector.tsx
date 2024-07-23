@@ -29,6 +29,7 @@ interface ImageSelectorProps {
 export function ImageSelector(imageSelectorProps: ImageSelectorProps): JSX.Element {
     const imgItems = imageUrls.map(imageUrl => 
         <img 
+            key={imageUrl}
             src={imageUrl} 
             className={(imageSelectorProps.selectedImgUrl === imageUrl)? "selected" : "unselected"} 
             onClick={() => imageSelectorProps.setSelectedImgUrl(imageUrl)}
