@@ -1,16 +1,17 @@
 .unselected {
-    width: 100px;
+    width: 20%;
 }
 
 .selected {
-    border: solid blue 5px;
-    width: 100px;
+    border: solid orange 3px;
+    width: 20%;
+    box-sizing:border-box;
 }
 
 .imageSelector {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 3px;
     width: 100%;
     justify-content: space-evenly;
 }
